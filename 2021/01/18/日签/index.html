@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>常见报错解决 | kun</title>
+  <title>日签 | kun</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 页面显示没有数据页面显示没有数据的时候（三级联动），注意去 mounted 里面看一下，获取数据的方法如 getAddress()；有没有执行，是否将数据渲染到了页面；">
+  <meta name="description" content="见到日出我便不能自己世界上美好的东西不太多，立秋傍晚从河对岸吹来的风。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常见报错解决">
-<meta property="og:url" content="http://example.com/2021/01/18/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/index.html">
+<meta property="og:title" content="日签">
+<meta property="og:url" content="http://example.com/2021/01/18/%E6%97%A5%E7%AD%BE/index.html">
 <meta property="og:site_name" content="kun">
-<meta property="og:description" content="1. 页面显示没有数据页面显示没有数据的时候（三级联动），注意去 mounted 里面看一下，获取数据的方法如 getAddress()；有没有执行，是否将数据渲染到了页面；">
+<meta property="og:description" content="见到日出我便不能自己世界上美好的东西不太多，立秋傍晚从河对岸吹来的风。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-18T04:37:52.350Z">
-<meta property="article:modified_time" content="2021-01-18T04:47:25.426Z">
+<meta property="og:image" content="http://example.com/assets/blogImg/blog1.jpg">
+<meta property="article:published_time" content="2021-01-18T06:53:03.293Z">
+<meta property="article:modified_time" content="2021-01-18T07:24:08.879Z">
 <meta property="article:author" content="kun">
 <meta property="article:tag" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/assets/blogImg/blog1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="kun" type="application/atom+xml">
   
@@ -147,39 +149,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-常见报错解决" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-日签" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      常见报错解决
+      日签
     </h1>
   
 
         
-        <a href="/2021/01/18/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-  	<time datetime="2021-01-18T04:37:52.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-18</time>
+        <a href="/2021/01/18/%E6%97%A5%E7%AD%BE/" class="archive-article-date">
+  	<time datetime="2021-01-18T06:53:03.293Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-页面显示没有数据"><a href="#1-页面显示没有数据" class="headerlink" title="1. 页面显示没有数据"></a>1. 页面显示没有数据</h3><p>页面显示没有数据的时候（三级联动），注意去 mounted 里面看一下，<br>获取数据的方法如 getAddress()；<br>有没有执行，是否将数据渲染到了页面；</p>
-<a id="more"></a>
-
-<h3 id="2-404-状态码"><a href="#2-404-状态码" class="headerlink" title="2.404 状态码"></a>2.404 状态码</h3><p>第一次：接口返回 404 状态码的时候，确认自己的运行环境，在测试环境运行调用接口的时候，需要后端把接口部署到测试服务器上，否则就会接口报错。<br>这是第二次报错 404，新增接口类别后，一定要记得去 vue.config.js 里面添加 context</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  devServer: &#123;</span><br><span class="line">    port: 8888,</span><br><span class="line">    open: <span class="literal">true</span>,</span><br><span class="line">    proxy: (() =&gt; &#123;</span><br><span class="line">        <span class="built_in">let</span> context = [<span class="string">&#x27;/credit&#x27;</span>];</span><br><span class="line">        <span class="built_in">let</span> obj = &#123;&#125;;</span><br><span class="line">        context.forEach(item =&gt; &#123;</span><br><span class="line">            obj[item] = &#123;</span><br><span class="line">                // 电脑本地</span><br><span class="line">                target: <span class="string">&#x27;http://10.200.144.130:12600/&#x27;</span></span><br><span class="line">            &#125;;  &#125;);</span><br><span class="line">        <span class="built_in">return</span> obj;</span><br><span class="line">    &#125;)()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-报错-TypeError-Object-…-is-not-a-function"><a href="#3-报错-TypeError-Object-…-is-not-a-function" class="headerlink" title="3.报错 TypeError: Object(…) is not a function"></a>3.报错 TypeError: Object(…) is not a function</h3><p>vue 报错 TypeError: Object(…) is not a function 从几个方面入手</p>
-<p>1.确认方法命名是否重名</p>
-<p>2.确认 import 的时候没有问题（我这次是 import from 的地址不对导致的）</p>
-<p>3.mounted 里面调用的时候测试一下是否有问题</p>
-<p>4.import {sth} from ‘@/api/index’ 中，如果没有加{}，也会报错 Object（…）is not a function</p>
-<h3 id="4-报-404-错误"><a href="#4-报-404-错误" class="headerlink" title="4.报 404 错误"></a>4.报 404 错误</h3><p>在域名管理，配置里面，要将新增的接口名称进行声明，否则就会报找不到</p>
-<p>遇到新的报 404 的情况<br>vue 跳转路由地址无效时，会返回 404。</p>
-<p>其实是上一种域名管理的特殊情况。</p>
+        <p><img src="/assets/blogImg/blog1.jpg" alt="avatar"></p>
+<p>见到日出我便不能自己<br>世界上美好的东西不太多，立秋傍晚从河对岸吹来的风。</p>
 
       
 
@@ -238,7 +229,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/18/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/18/%E6%97%A5%E7%AD%BE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -252,18 +243,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/18/%E6%97%A5%E7%AD%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/18/intro/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          日签
+          个人简介
         
       </div>
     </a>
   
   
-    <a href="/2021/01/18/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数组去重（算法整理）</div>
+    <a href="/2021/01/18/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常见报错解决</div>
       <i class="icon-circle-right"></i>
     </a>
   
